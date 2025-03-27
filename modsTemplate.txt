@@ -1,0 +1,7 @@
+https://modrinth.com/mod/ModName
+ModName
+ClientServer
+❌
+❌
+❌
+---------
