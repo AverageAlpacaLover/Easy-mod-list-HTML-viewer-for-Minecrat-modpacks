@@ -71,13 +71,13 @@ Mod list txt file structure:
 Blank Mod list txt file:
 <br />
 <ul>
-  <li>LinkToTheMod</li>
-  <li>NameOfTheMod</li>
-  <li>ClientServer</li>
-  <li>❌</li>
-  <li>❌</li>
-  <li>❌</li>
-  <li>---------</li>
+LinkToTheMod
+NameOfTheMod
+ClientServer
+❌
+❌
+❌
+---------
 </ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
