@@ -50,29 +50,34 @@ Simple Html table viewer for Minecraft mod packs. With easy to read visuals, fil
 
 <!-- USAGE EXAMPLES -->
 ## Usage
-
-Create a txt file with specific structure.
-Don't forget to put mods .webp to "modIcons" folder under the same name as the mod name.
-Open the Html and choose list with mods file in the top right corner.
-
+<ul>
+  <li>Create a txt file with specific structure.</li>
+  <li>Don't forget to put mods .webp to "modIcons" folder under the same name as the mod name.</li>
+  <li>Open the Html and choose list with mods file in the top right corner.</li>
+</ul>
+<br />
 Mod list txt file structure:
-
-LinkToTheMod - any link that you will be redirected to the mod.
-NameOfTheMod - any name of the mod.
-ClientServer/Server/Client - just simple string to know, what mod type is.
-Dependencies - what another mods are needed to make this exactly one to work.
-Needed For - for what another mods, this exactly one is needed.
-Description - for better understanding what mod is doing.
----------
-
+<br />
+<ul>
+  <li>LinkToTheMod - any link that you will be redirected to the mod.</li>
+  <li>NameOfTheMod - any name of the mod.</li>
+  <li>ClientServer/Server/Client - just simple string to know, what mod type is.</li>
+  <li>Dependencies - what another mods are needed to make this exactly one to work.</li>
+  <li>Needed For - for what another mods, this exactly one is needed.</li>
+  <li>Description - for better understanding what mod is doing.</li>
+  <li>---------</li>
+</ul>
+<br />
 Blank Mod list txt file:
-
-LinkToTheMod
-NameOfTheMod
-ClientServer
-❌
-❌
-❌
----------
+<br />
+<ul>
+  <li>LinkToTheMod</li>
+  <li>NameOfTheMod</li>
+  <li>ClientServer</li>
+  <li>❌</li>
+  <li>❌</li>
+  <li>❌</li>
+  <li>---------</li>
+</ul>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
