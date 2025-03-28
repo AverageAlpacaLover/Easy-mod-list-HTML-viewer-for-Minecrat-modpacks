@@ -1,17 +1,87 @@
 const search = document.querySelector('.input-group input'),
 	file = document.querySelector('.input-file input'),
 	table_headings = document.querySelectorAll('thead th');	
-var table_rows = document.querySelectorAll('tbody tr');
+    let table_rows = document.querySelectorAll('tbody tr');
 // 0. Adding formated .txt into a table
 
 file.addEventListener('change', function () {
                 let fr = new FileReader();
-				let tbody = document.querySelector('tbody');
+				let tbody = document.querySelector('tbody');         
+                tbody.innerHTML = "";
                 fr.onload = function () {
-					let list = fr.result.split("\n");
-					for (let index =0; index < list.length-7; index+=7) {
+                    let txtTable=[]; //creating jagged array of 0link + 1name + 2type + 3dep + 4needs + 5desc
+                    txtTable.push([]);
+                   /* var txtTable = [{
+                        modLink: "",
+                        modName: "",
+                        modType: "",
+                        modDependencies: "",
+                        modRequireIn: "",
+                        modDescription: "",
+                    }];*/
+                    let row = 0; // pointer for current row
+                    fr.result.split('\r\n').forEach((element, index) => { //going through each line of txt file
+                        if ( (index+1) % 7 === 0) //creating new row in table after ------ (7 row of txt file)
+                        {
+                            txtTable.push([]); //new row
+                            row++; // moving pointer to new row
+                        }
+                        else
+                        txtTable[row].push(element); // populating columns of the table with info from txt file
+                    });
+                    txtTable.forEach((element, index) => { //removing any row with bad number of elements in it
+                        if (element.length<6)
+                        txtTable.splice(index,1);   
+                    });
+                    
+					for (let index =0; index < txtTable.length; index++) {
+                        //pushing every element of a row table to a specific array for better readability
+                        let modLink = txtTable[index][0];
+                        let modName = txtTable[index][1];
+                        let modType = txtTable[index][2];
+                        let modDependencies = txtTable[index][3].split("/");
+                        let modRequireIn = txtTable[index][4].split("/");
+                        let modDescription = txtTable[index][5];
+                        //creating every cell of an *index row table for the HTML
+                        let tableCellModIcon = '<td><img src="modIcons/'+txtTable[index][1]+'.webp"></td>';
+                        let tableCellModName = '<td><a href="'+modLink+'">'+modName+'</a></td>';
+                        let tableCellModType = '<td><p class="modtype '+modType.toLowerCase()+'">'+modType+'</td>';
+                        
+                        let tableCellModDependencies = '<td>';
+                        for (let mIndex = 0; mIndex < modDependencies.length; mIndex++) { //Looping through every Mod Dependance
+                            let linkFound = false;
+                            for (let tIndex = 0; tIndex < txtTable.length; tIndex++) { //Looping through every Mod Name to extract a link to the mod
+                                if (txtTable[tIndex][1] === modDependencies[mIndex]) { // Mod Name = Mod Dependance?
+                                        tableCellModDependencies += '<a href="' + txtTable[tIndex][0] + '">' + modDependencies[mIndex] + '</a>, ' ;
+                                        linkFound = true;
+                                } 
+                            }
+                            if (linkFound === false) {
+                                tableCellModDependencies += modDependencies[mIndex] + ', ';
+                            }
+                        }
+                        tableCellModDependencies = tableCellModDependencies.slice(0,-2);
+                        tableCellModDependencies += '</td>'
 
-                		tbody.innerHTML += '<tr><td><img src="modIcons/'+list[index+1]+'.webp"></td><td><a href="'+list[index]+'">'+list[index+1]+'</a></td><td><p class="modtype '+list[index+2].toLowerCase()+'">'+list[index+2]+'</td><td>'+list[index+3]+'</td><td>'+list[index+4]+'</td><td>'+list[index+5]+'</td></tr>';
+                        let tableCellModRequireIn = '<td>';
+                        for (let mIndex = 0; mIndex < modRequireIn.length; mIndex++) { //Looping through every Mod Dependance
+                            let linkFound = false;
+                            for (let tIndex = 0; tIndex < txtTable.length; tIndex++) { //Looping through every Mod Name to extract a link to the mod
+                                if (txtTable[tIndex][1] === modRequireIn[mIndex]) { // Mod Name = Mod Require?
+                                        tableCellModRequireIn += '<a href="' + txtTable[tIndex][0] + '">' + modRequireIn[mIndex] + '</a>, ' ;
+                                        linkFound = true;
+                                }
+                            }
+                            if (linkFound === false) {
+                                tableCellModRequireIn += modRequireIn[mIndex] + ', ';
+                            }
+                        } 
+                        tableCellModRequireIn = tableCellModRequireIn.slice(0,-2);
+                        tableCellModRequireIn += '</td>'
+
+                        let tableCellDescription = '<td>' + modDescription + '</td>';
+
+                		tbody.innerHTML += '<tr>' + tableCellModIcon + tableCellModName + tableCellModType + tableCellModDependencies + tableCellModRequireIn + tableCellDescription + '</tr>';
         			}
                 }
 

@@ -5,3 +5,10 @@ ClientServer
 ❌
 ❌
 ---------
+https://modrinth.com/mod/ModName
+ModName
+ClientServer
+❌
+❌
+❌
+---------

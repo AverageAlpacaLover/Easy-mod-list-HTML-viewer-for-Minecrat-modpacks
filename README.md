@@ -62,22 +62,21 @@ Mod list txt file structure:
   <li>LinkToTheMod - any link that you will be redirected to the mod.</li>
   <li>NameOfTheMod - any name of the mod.</li>
   <li>ClientServer/Server/Client - just simple string to know, what mod type is.</li>
-  <li>Dependencies - what another mods are needed to make this exactly one to work.</li>
-  <li>Needed For - for what another mods, this exactly one is needed.</li>
+  <li>Dependencies - what another mods, separated by "/" symbol, are needed to make this exactly one to work.</li>
+  <li>Needed For - for what another mods, separated by "/" symbol, this exactly one is needed.</li>
   <li>Description - for better understanding what mod is doing.</li>
   <li>---------</li>
 </ul>
 <br />
 Blank Mod list txt file:
 <br />
-<ul>
-LinkToTheMod
-NameOfTheMod
-ClientServer
-❌
-❌
-❌
----------
-</ul>
+
+<br />LinkToTheMod
+<br />NameOfTheMod
+<br />ClientServer
+<br />❌
+<br />❌
+<br />❌
+<br />---------
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
