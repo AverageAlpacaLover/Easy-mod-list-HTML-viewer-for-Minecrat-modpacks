@@ -43,7 +43,7 @@ file.addEventListener('change', function () {
                         let modRequireIn = txtTable[index][4].split("/");
                         let modDescription = txtTable[index][5];
                         //creating every cell of an *index row table for the HTML
-                        let tableCellModIcon = '<td><img src="modIcons/'+txtTable[index][1]+'.webp"></td>';
+                        let tableCellModIcon = '<td><img src="modIcons/'+modName+'.webp"></td>';
                         let tableCellModName = '<td><a href="'+modLink+'">'+modName+'</a></td>';
                         let tableCellModType = '<td><p class="modtype '+modType.toLowerCase()+'">'+modType+'</td>';
                         
@@ -52,7 +52,8 @@ file.addEventListener('change', function () {
                             let linkFound = false;
                             for (let tIndex = 0; tIndex < txtTable.length; tIndex++) { //Looping through every Mod Name to extract a link to the mod
                                 if (txtTable[tIndex][1] === modDependencies[mIndex]) { // Mod Name = Mod Dependance?
-                                        tableCellModDependencies += '<a href="' + txtTable[tIndex][0] + '">' + modDependencies[mIndex] + '</a>, ' ;
+                                        let icon = '<img class="tooltipImage" src="modIcons/' + txtTable[tIndex][1] + '.webp" alt="" />' //icon when hovering over the link
+                                        tableCellModDependencies += '<a class="tooltip" href="' + txtTable[tIndex][0] + '">' + modDependencies[mIndex] + icon + '</a>, '; 
                                         linkFound = true;
                                 } 
                             }
@@ -60,7 +61,7 @@ file.addEventListener('change', function () {
                                 tableCellModDependencies += modDependencies[mIndex] + ', ';
                             }
                         }
-                        tableCellModDependencies = tableCellModDependencies.slice(0,-2);
+                        tableCellModDependencies = tableCellModDependencies.substring(0,tableCellModDependencies.lastIndexOf(', ')) + tableCellModDependencies.substring(tableCellModDependencies.lastIndexOf(', ')+2 , tableCellModDependencies.length); //removing last ", "
                         tableCellModDependencies += '</td>'
 
                         let tableCellModRequireIn = '<td>';
@@ -68,7 +69,8 @@ file.addEventListener('change', function () {
                             let linkFound = false;
                             for (let tIndex = 0; tIndex < txtTable.length; tIndex++) { //Looping through every Mod Name to extract a link to the mod
                                 if (txtTable[tIndex][1] === modRequireIn[mIndex]) { // Mod Name = Mod Require?
-                                        tableCellModRequireIn += '<a href="' + txtTable[tIndex][0] + '">' + modRequireIn[mIndex] + '</a>, ' ;
+                                    let icon = '<img class="tooltipImage" src="modIcons/' + txtTable[tIndex][1] + '.webp" alt="" />' //icon when hovering over the link
+                                        tableCellModRequireIn += '<a class="tooltip" href="' + txtTable[tIndex][0] + '">' + modRequireIn[mIndex] + icon + '</a>, ';
                                         linkFound = true;
                                 }
                             }
@@ -76,7 +78,7 @@ file.addEventListener('change', function () {
                                 tableCellModRequireIn += modRequireIn[mIndex] + ', ';
                             }
                         } 
-                        tableCellModRequireIn = tableCellModRequireIn.slice(0,-2);
+                        tableCellModRequireIn = tableCellModRequireIn.substring(0,tableCellModRequireIn.lastIndexOf(', ')) + tableCellModRequireIn.substring(tableCellModRequireIn.lastIndexOf(', ')+2 , tableCellModRequireIn.length); //removing last ", "
                         tableCellModRequireIn += '</td>'
 
                         let tableCellDescription = '<td>' + modDescription + '</td>';

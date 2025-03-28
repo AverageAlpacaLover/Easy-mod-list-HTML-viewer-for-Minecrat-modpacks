@@ -24,6 +24,28 @@ body {
     text-align: center;
 }
 /*---------------------------------------------*/
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltipImage {
+    visibility: visible;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 100;
+}
+
+.tooltip:hover .tooltipImage {
+    visibility: visible;
+}
+/*---------------------------------------------*/
 .header {
     border-radius: .8rem;
     height: 5%;
