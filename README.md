@@ -61,6 +61,7 @@ Mod list txt file structure:
 <ul>
   <li>LinkToTheMod - any link that you will be redirected to the mod.</li>
   <li>NameOfTheMod - any name of the mod.</li>
+  <li>ModLoader - Fabric, Neoforged, Forge, Quilt (you can check this on mod page).</li>
   <li>ClientServer/Server/Client - just simple string to know, what mod type is.</li>
   <li>Dependencies - what another mods, separated by "/" symbol, are needed to make this exactly one to work.</li>
   <li>Needed For - for what another mods, separated by "/" symbol, this exactly one is needed.</li>
@@ -73,6 +74,7 @@ Blank Mod list txt file:
 
 <br />LinkToTheMod
 <br />NameOfTheMod
+<br />Fabric/Neoforged
 <br />ClientServer
 <br />❌
 <br />❌
