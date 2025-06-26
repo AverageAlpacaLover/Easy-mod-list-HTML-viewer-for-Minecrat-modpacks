@@ -18,23 +18,37 @@
                 <input type="checkbox" id="export-file">
                 <div class="export__file-options">
                     <label>Export As &nbsp; &#10140;</label>
-                    <label for="export-file" id="toPDF">PDF <img src="pageImages/pdf.png" alt=""></label>
-                    <label for="export-file" id="toJSON">JSON <img src="pageImages/json.png" alt=""></label>
-                    <label for="export-file" id="toCSV">CSV <img src="pageImages/csv.png" alt=""></label>
-                    <label for="export-file" id="toEXCEL">EXCEL <img src="pageImages/excel.png" alt=""></label>
+                    <label for="export-file" id="toPDF"> PDF <img src="pageImages/pdf.png" alt=""></label>
+                    <label for="export-file" id="toJSON"> JSON <img src="pageImages/json.png" alt=""></label>
+                    <label for="export-file" id="toCSV"> CSV <img src="pageImages/csv.png" alt=""></label>
+                    <label for="export-file" id="toEXCEL"> EXCEL <img src="pageImages/excel.png" alt=""></label>
                 </div>
             </div>
         </section>
-    <main class="table" id="customers_table">
+    <main class="table" id="mods_table">
             <table>
                 <thead>
                     <tr>
-                    	<th class="text"> Icon <span class="icon-arrow">&UpArrow;</span></th>
-                        <th class="text"> Mod <span class="icon-arrow">&UpArrow;</span></th>
-                        <th class="text"> Type <span class="icon-arrow">&UpArrow;</span></th>
-						<th class="text"> Dependencies <span class="icon-arrow">&UpArrow;</span></th>
-						<th class="text"> Require In <span class="icon-arrow">&UpArrow;</span></th>
-                        <th class="text"> Description <span class="icon-arrow">&UpArrow;</span></th>
+                    	<th class="text"> Icon </th>
+                        <th class="text sortable"> Mod <span class="icon-arrow">&UpArrow;</span></th>
+                        <th class="text"> Loader 
+                        <select class="fabric neoforged forge quilt" id="loader" size="0" multiple>
+                            <option value="fabric" selected="selected"> Fabric </option>
+                            <option value="neoforged" selected="selected"> Neoforged </option>
+                            <option value="forge" selected="selected"> Forge </option>
+                            <option value="quilt" selected="selected"> Quilt </option>
+                        </select>
+                        </th>
+                        <th class="text"> Type 
+                        <select class="clientserver client server" id="type" size="0" multiple>
+                            <option value="clientserver" selected="selected"> ClientServer </option>
+                            <option value="client" selected="selected"> Client </option>
+                            <option value="server" selected="selected"> Server </option>
+                        </select>
+                        </th>
+						<th class="text sortable"> Dependencies <span class="icon-arrow">&UpArrow;</span></th>
+						<th class="text sortable"> Requirements <span class="icon-arrow">&UpArrow;</span></th>
+                        <th class="text sortable"> Description <span class="icon-arrow">&UpArrow;</span></th>
                     </tr>
                 </thead>
                 <tbody>

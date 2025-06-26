@@ -1,27 +1,24 @@
-const search = document.querySelector('.input-group input'),
-	file = document.querySelector('.input-file input'),
-	table_headings = document.querySelectorAll('thead th');	
-    let table_rows = document.querySelectorAll('tbody tr');
+const SEARCH = document.querySelector('.input-group input'),
+    FILE = document.querySelector('.input-file input'),
+    TABLE_HEADINGS_SORTABLE = document.querySelectorAll('thead th.sortable'),
+    CHOSEN_LOADERS = document.querySelector('thead select#loader'),
+    CHOSEN_TYPES = document.querySelector('thead select#type');
+let tableRows = document.querySelectorAll('tbody tr');
+
 // 0. Adding formated .txt into a table
 
-file.addEventListener('change', function () {
+FILE.addEventListener('change', populateTable);
+
+function populateTable() {
                 let fr = new FileReader();
 				let tbody = document.querySelector('tbody');         
                 tbody.innerHTML = "";
                 fr.onload = function () {
-                    let txtTable=[]; //creating jagged array of 0link + 1name + 2type + 3dep + 4needs + 5desc
+                    let txtTable=[]; //creating jagged array of 0link + 1name + 2loader + 3type + 4dep + 5needs + 6desc
                     txtTable.push([]);
-                   /* var txtTable = [{
-                        modLink: "",
-                        modName: "",
-                        modType: "",
-                        modDependencies: "",
-                        modRequireIn: "",
-                        modDescription: "",
-                    }];*/
                     let row = 0; // pointer for current row
                     fr.result.split('\r\n').forEach((element, index) => { //going through each line of txt file
-                        if ( (index+1) % 7 === 0) //creating new row in table after ------ (7 row of txt file)
+                        if ( (index+1) % 8 === 0) //creating new row in table after ------ (8 row of txt file)
                         {
                             txtTable.push([]); //new row
                             row++; // moving pointer to new row
@@ -38,134 +35,168 @@ file.addEventListener('change', function () {
                         //pushing every element of a row table to a specific array for better readability
                         let modLink = txtTable[index][0];
                         let modName = txtTable[index][1];
-                        let modType = txtTable[index][2];
-                        let modDependencies = txtTable[index][3].split("/");
-                        let modRequireIn = txtTable[index][4].split("/");
-                        let modDescription = txtTable[index][5];
+                        let modLoader = txtTable[index][2];
+                        let modType = txtTable[index][3];
+                        let modDependencies = txtTable[index][4].split("/");
+                        let modRequirements = txtTable[index][5].split("/");
+                        let modDescription = txtTable[index][6];
                         //creating every cell of an *index row table for the HTML
-                        let tableCellModIcon = '<td><img src="modIcons/' + modName + '.webp" onerror="this.src=\'pageImages/empty.webp\';"></td>';
-                        let tableCellModName = '<td><a href="'+modLink+'">'+modName+'</a></td>';
-                        let tableCellModType = '<td><p class="modtype '+modType.toLowerCase()+'">'+modType+'</td>';
+                        let tableCellIcon = '<td><img src="modIcons/' + modName + '.webp" onerror="this.src=\'pageImages/empty.webp\';"></td>';
+                        let tableCellName = '<td><a href="' + modLink + '">' + modName + '</a></td>';
+                        let tableCellLoader = '<td><img src="modLoaderIcons/' + modLoader.toLowerCase() + '.png" onerror="this.src=\'pageImages/empty.webp\';">' + modLoader.toUpperCase() + '</td>';
+                        let tableCellType = '<td><p class="modtype ' + modType.toLowerCase() + '">' + modType + '</td>';
                         
-                        let tableCellModDependencies = '<td>';
+                        let tableCellDependencies = '<td>';
                         for (let mIndex = 0; mIndex < modDependencies.length; mIndex++) { //Looping through every Mod Dependance
                             let linkFound = false;
                             for (let tIndex = 0; tIndex < txtTable.length; tIndex++) { //Looping through every Mod Name to extract a link to the mod
                                 if (txtTable[tIndex][1] === modDependencies[mIndex]) { // Mod Name = Mod Dependance?
-                                        let icon = '<img class="tooltipImage" src="modIcons/' + txtTable[tIndex][1] + '.webp" onerror="this.src=\'pageImages/empty.webp\';">' //icon when hovering over the link
-                                        tableCellModDependencies += '<a class="tooltip" href="' + txtTable[tIndex][0] + '">' + modDependencies[mIndex] + icon + '</a>, '; 
+                                        let icon = '<img class="tooltipImage" src="modIcons/'+ txtTable[tIndex][1] +'.webp" onerror="this.src=\'pageImages/empty.webp\';">' //icon when hovering over the link
+                                        tableCellDependencies += '<a class="tooltip" href="'+ txtTable[tIndex][0] +'">'+ modDependencies[mIndex] + icon +'</a> | '; 
                                         linkFound = true;
                                 } 
                             }
                             if (linkFound === false) {
-                                tableCellModDependencies += modDependencies[mIndex] + ', ';
+                                tableCellDependencies += modDependencies[mIndex] + ' | ';
                             }
                         }
-                        tableCellModDependencies = tableCellModDependencies.substring(0,tableCellModDependencies.lastIndexOf(', ')) + tableCellModDependencies.substring(tableCellModDependencies.lastIndexOf(', ')+2 , tableCellModDependencies.length); //removing last ", "
-                        tableCellModDependencies += '</td>'
+                        tableCellDependencies = tableCellDependencies.slice(0,tableCellDependencies.lastIndexOf(' | ')); //removing last " | "
+                        tableCellDependencies += '</td>'
 
-                        let tableCellModRequireIn = '<td>';
-                        for (let mIndex = 0; mIndex < modRequireIn.length; mIndex++) { //Looping through every Mod Dependance
+                        let tableCellRequirements = '<td>';
+                        for (let mIndex = 0; mIndex < modRequirements.length; mIndex++) { //Looping through every Mod Dependance
                             let linkFound = false;
                             for (let tIndex = 0; tIndex < txtTable.length; tIndex++) { //Looping through every Mod Name to extract a link to the mod
-                                if (txtTable[tIndex][1] === modRequireIn[mIndex]) { // Mod Name = Mod Require?
+                                if (txtTable[tIndex][1] === modRequirements[mIndex]) { // Mod Name = Mod Require?
                                     let icon = '<img class="tooltipImage" src="modIcons/' + txtTable[tIndex][1] + '.webp" onerror="this.src=\'pageImages/empty.webp\';">' //icon when hovering over the link
-                                        tableCellModRequireIn += '<a class="tooltip" href="' + txtTable[tIndex][0] + '">' + modRequireIn[mIndex] + icon + '</a>, ';
+                                        tableCellRequirements += '<a class="tooltip" href="' + txtTable[tIndex][0] + '">' + modRequirements[mIndex] + icon + '</a> | ';
                                         linkFound = true;
                                 }
                             }
                             if (linkFound === false) {
-                                tableCellModRequireIn += modRequireIn[mIndex] + ', ';
+                                tableCellRequirements += modRequirements[mIndex] + ' | ';
                             }
                         } 
-                        tableCellModRequireIn = tableCellModRequireIn.substring(0,tableCellModRequireIn.lastIndexOf(', ')) + tableCellModRequireIn.substring(tableCellModRequireIn.lastIndexOf(', ')+2 , tableCellModRequireIn.length); //removing last ", "
-                        tableCellModRequireIn += '</td>'
+                        tableCellRequirements = tableCellRequirements.slice(0,tableCellRequirements.lastIndexOf(' | ')); //removing last " | "
+                        tableCellRequirements += '</td>'
 
                         let tableCellDescription = '<td>' + modDescription + '</td>';
 
-                		tbody.innerHTML += '<tr>' + tableCellModIcon + tableCellModName + tableCellModType + tableCellModDependencies + tableCellModRequireIn + tableCellDescription + '</tr>';
+                		tbody.innerHTML += '<tr class="' + modLoader.toLowerCase() + ' ' + modType.toLowerCase() + '">' + tableCellIcon + tableCellName + tableCellLoader + tableCellType + tableCellDependencies + tableCellRequirements + tableCellDescription + '</tr>';
         			}
                 }
 
                 fr.readAsText(this.files[0]);
-            });
+}
 
 // 1. Searching for specific data of HTML table
-search.addEventListener('input', searchTable);
+CHOOSECHOSEN_LOADERS_LOADER.addEventListener('change', function (){
+    CHOSEN_LOADERS.classList = "";
+    Array.from(CHOSEN_LOADERS.selectedOptions).forEach(option => CHOSEN_LOADERS.classList.add(option.value)) //adding classes to hide UNSELECTED mod loaders
+    hideRows();
+})
 
-function searchTable() {	
-	table_rows = document.querySelectorAll('tbody tr');
-    table_rows.forEach((row, i) => {
-        let table_data = row.textContent.toLowerCase(),
-            search_data = search.value.toLowerCase();
+CHOSEN_TYPES.addEventListener('change', function(){
+    CHOSEN_TYPES.classList = "";
+    Array.from(CHOSEN_TYPES.selectedOptions).forEach(option => CHOSEN_TYPES.classList.add(option.value)) //adding classes to hide UNSELECTED mod types
+    hideRows()
+})
 
-        row.classList.toggle('hide', table_data.indexOf(search_data) < 0);
+function hideRows() { //hide unselected mod loader + mod type in table
+    let toHide =""; //empty string fot loader+type CLASSES that will be HIDDEN in table
+    let toVisible = ""; //empty string fot loader+type CLASSES that will be SHOWN in table
+    CHOSEN_LOADERS.classList.forEach(loaderValue => {
+        CHOSEN_TYPES.classList.forEach(typeValue => {
+            toVisible += "." + loaderValue + "." + typeValue + ", "; //CHOSEN classes to SHOW
+            toHide += ":not(." + loaderValue + "." + typeValue + ")"; //UNSELECTED classes to HIDE
+        });
+    });
+
+    tableRows = document.querySelectorAll('tbody > ' + toVisible.slice(0, toVisible.lastIndexOf(", ")) + ''); //select all rows with CHOSEN mod loaders+types classes
+    tableRows.forEach(row => row.classList.remove('hide')); //SHOW CHOSEN loaders+types
+
+    tableRows = document.querySelectorAll('tbody > ' + toHide + ''); //select all rows with UNSELECTED mod loaders+types classes
+    tableRows.forEach(row => row.classList.add('hide')) //HIDE UNSELECTED loaders+types
+}
+
+SEARCH.addEventListener('input', searchTable)
+
+function searchTable() {
+    let toSearch ="";  //empty string fot loader+type CLASSES that will be SEARCHED in table
+    CHOSEN_LOADERS.classList.forEach(loaderValue => {
+        CHOSEN_TYPES.classList.forEach(typeValue => {
+            toSearch += "." + loaderValue + "." + typeValue + ", "; //CHOSEN classes to SEARCH
+        });
+    });	
+    tableRows = document.querySelectorAll('tbody > ' + toSearch.slice(0, toSearch.lastIndexOf(", ")) + ''); //select all rows to SEARCH
+    tableRows.forEach((row, i) => {
+        let tableData = row.textContent.toLowerCase(), //table row as string
+            searchData = SEARCH.value.toLowerCase(); //string to SEARCH in rows from SEARCHBOX
+
+        row.classList.toggle('hide', tableData.indexOf(searchData) < 0);
     })
 }
 
-// 2. Sorting | Ordering data of HTML table
-table_headings.forEach((head, i) => {		
-    let sort_asc = true;
+// 2. Ordering data of HTML table
+TABLE_HEADINGS_SORTABLE.forEach((head, i) => {		
+    let sortAsc = true;
     head.onclick = () => {
-		
-        table_headings.forEach(head => head.classList.remove('active'));
+        TABLE_HEADINGS_SORTABLE.forEach(head => head.classList.remove('active'));
         head.classList.add('active');
 
         document.querySelectorAll('td').forEach(td => td.classList.remove('active'));
 
-		table_rows = document.querySelectorAll('tbody tr');
-        table_rows.forEach(row => {
-            row.querySelectorAll('td')[i].classList.add('active');
+		tableRows = document.querySelectorAll('tbody tr');
+        tableRows.forEach(row => {
+            row.querySelectorAll('td')[head.cellIndex].classList.add('active');
         })
 
-        head.classList.toggle('asc', sort_asc);
-        sort_asc = head.classList.contains('asc') ? false : true;
+        head.classList.toggle('asc', sortAsc);
+        sortAsc = head.classList.contains('asc') ? false : true;
 
-        sortTable(i, sort_asc);
+        sortTable(head.cellIndex, sortAsc);
     }
 })
 
-function sortTable(column, sort_asc) {			
-    [...table_rows].sort((a, b) => {
-        let first_row = a.querySelectorAll('td')[column].textContent.toLowerCase(),
-            second_row = b.querySelectorAll('td')[column].textContent.toLowerCase();
+function sortTable(column, sortAsc) {			
+    [...tableRows].sort((a, b) => {
+        let firstRow = a.querySelectorAll('td')[column].textContent.toLowerCase(),
+            secondRow = b.querySelectorAll('td')[column].textContent.toLowerCase();
 
-        return sort_asc ? (first_row < second_row ? 1 : -1) : (first_row < second_row ? -1 : 1);
+        return sortAsc ? (firstRow < secondRow ? 1 : -1) : (firstRow < secondRow ? -1 : 1);
     })
-        .map(sorted_row => document.querySelector('tbody').appendChild(sorted_row));
+        .map(sortedRow => document.querySelector('tbody').appendChild(sortedRow));
 }
 
 // 3. Converting HTML table to PDF
+const PDF_BTN = document.querySelector('#toPDF');
+const MODS_TABLE = document.querySelector('#mods_table');
 
-const pdf_btn = document.querySelector('#toPDF');
-const customers_table = document.querySelector('#customers_table');
 
-
-const toPDF = function (customers_table) {
-    const html_code = `
+const toPDF = function (MODS_TABLE) {
+    const HTML_CODE = `
     <!DOCTYPE html>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <main class="table" id="customers_table">${customers_table.innerHTML}</main>`;
+    <main class="table" id="mods_table">${mods_table.innerHTML}</main>`;
 
-    const new_window = window.open();
-     new_window.document.write(html_code);
+    const NEW_WINDOW = window.open();
+     NEW_WINDOW.document.write(HTML_CODE);
 
     setTimeout(() => {
-        new_window.print();
-        new_window.close();
+        NEW_WINDOW.print();
+        NEW_WINDOW.close();
     }, 400);
 }
 
-pdf_btn.onclick = () => {
-    toPDF(customers_table);
+PDF_BTN.onclick = () => {
+    toPDF(MODS_TABLE);
 }
 
 // 4. Converting HTML table to JSON
-
-const json_btn = document.querySelector('#toJSON');
+const JSON_BTN = document.querySelector('#toJSON');
 
 const toJSON = function (table) {
-    let table_data = [],
+    let TABLE_DATA = [],
         t_head = [],
 
         t_headings = table.querySelectorAll('th'),
@@ -178,109 +209,100 @@ const toJSON = function (table) {
     }
 
     t_rows.forEach(row => {
-        const row_object = {},
-            t_cells = row.querySelectorAll('td');
+        const ROW_OBJECT = {},
+            T_CELLS = row.querySelectorAll('td');
 
-        t_cells.forEach((t_cell, cell_index) => {
-            const img = t_cell.querySelector('img');
-            if (img) {
-                row_object['customer image'] = decodeURIComponent(img.src);
+        T_CELLS.forEach((t_cell, cell_index) => {
+            const IMG = t_cell.querySelector('img');
+            if (IMG) {
+                ROW_OBJECT['customer image'] = decodeURIComponent(IMG.src);
             }
-            row_object[t_head[cell_index]] = t_cell.textContent.trim();
+            ROW_OBJECT[t_head[cell_index]] = t_cell.textContent.trim();
         })
-        table_data.push(row_object);
+        TABLE_DATA.push(ROW_OBJECT);
     })
 
-    return JSON.stringify(table_data, null, 4);
+    return JSON.stringify(TABLE_DATA, null, 4);
 }
 
-json_btn.onclick = () => {
-    const json = toJSON(customers_table);
-    downloadFile(json, 'json')
+JSON_BTN.onclick = () => {
+    const JSON = toJSON(MODS_TABLE);
+    downloadFile(JSON, 'json')
 }
 
 // 5. Converting HTML table to CSV File
-
-const csv_btn = document.querySelector('#toCSV');
+const CSV_BTN = document.querySelector('#toCSV');
 
 const toCSV = function (table) {
-    // Code For SIMPLE TABLE
-    // const t_rows = table.querySelectorAll('tr');
-    // return [...t_rows].map(row => {
-    //     const cells = row.querySelectorAll('th, td');
-    //     return [...cells].map(cell => cell.textContent.trim()).join(',');
-    // }).join('\n');
+    const T_HEADS = table.querySelectorAll('th'),
+        TBODY_ROWS = table.querySelectorAll('tbody tr');
 
-    const t_heads = table.querySelectorAll('th'),
-        tbody_rows = table.querySelectorAll('tbody tr');
-
-    const headings = [...t_heads].map(head => {
+    const HEADINGS = [...T_HEADS].map(head => {
         let actual_head = head.textContent.trim().split(' ');
         return actual_head.splice(0, actual_head.length - 1).join(' ').toLowerCase();
     }).join(',') + ',' + 'image name';
 
-    const table_data = [...tbody_rows].map(row => {
-        const cells = row.querySelectorAll('td'),
-            img = decodeURIComponent(row.querySelector('img').src),
-            data_without_img = [...cells].map(cell => cell.textContent.replace(/,/g, ".").trim()).join(',');
+    const TABLE_DATA = [...TBODY_ROWS].map(row => {
+        const CELLS = row.querySelectorAll('td'),
+            IMG = decodeURIComponent(row.querySelector('img').src),
+            DATA_WITHOUT_IMG = [...CELLS].map(cell => cell.textContent.replace(/,/g, ".").trim()).join(',');
 
-        return data_without_img + ',' + img;
+        return DATA_WITHOUT_IMG + ',' + IMG;
     }).join('\n');
 
-    return headings + '\n' + table_data;
+    return HEADINGS + '\n' + TABLE_DATA;
 }
 
-csv_btn.onclick = () => {
-    const csv = toCSV(customers_table);
-    downloadFile(csv, 'csv', 'customer orders');
+CSV_BTN.onclick = () => {
+    const CSV = toCSV(MODS_TABLE);
+    downloadFile(CSV, 'csv', 'customer orders');
 }
 
 // 6. Converting HTML table to EXCEL File
-
-const excel_btn = document.querySelector('#toEXCEL');
+const EXCEL_BTN = document.querySelector('#toEXCEL');
 
 const toExcel = function (table) {
     // Code For SIMPLE TABLE
-    // const t_rows = table.querySelectorAll('tr');
-    // return [...t_rows].map(row => {
-    //     const cells = row.querySelectorAll('th, td');
-    //     return [...cells].map(cell => cell.textContent.trim()).join('\t');
+    // const T_ROWS = table.querySelectorAll('tr');
+    // return [...T_ROWS].map(row => {
+    //     const CELLS = row.querySelectorAll('th, td');
+    //     return [...CELLS].map(cell => cell.textContent.trim()).join('\t');
     // }).join('\n');
 
-    const t_heads = table.querySelectorAll('th'),
-        tbody_rows = table.querySelectorAll('tbody tr');
+    const T_HEADS = table.querySelectorAll('th'),
+        TBODY_ROWS = table.querySelectorAll('tbody tr');
 
-    const headings = [...t_heads].map(head => {
+    const HEADINGS = [...T_HEADS].map(head => {
         let actual_head = head.textContent.trim().split(' ');
         return actual_head.splice(0, actual_head.length - 1).join(' ').toLowerCase();
     }).join('\t') + '\t' + 'image name';
 
-    const table_data = [...tbody_rows].map(row => {
-        const cells = row.querySelectorAll('td'),
-            img = decodeURIComponent(row.querySelector('img').src),
-            data_without_img = [...cells].map(cell => cell.textContent.trim()).join('\t');
+    const TABLE_DATA = [...TBODY_ROWS].map(row => {
+        const CELLS = row.querySelectorAll('td'),
+            IMG = decodeURIComponent(row.querySelector('img').src),
+            DATA_WITHOUT_IMG = [...CELLS].map(cell => cell.textContent.trim()).join('\t');
 
-        return data_without_img + '\t' + img;
+        return DATA_WITHOUT_IMG + '\t' + IMG;
     }).join('\n');
 
-    return headings + '\n' + table_data;
+    return HEADINGS + '\n' + TABLE_DATA;
 }
 
-excel_btn.onclick = () => {
-    const excel = toExcel(customers_table);
-    downloadFile(excel, 'excel');
+EXCEL_BTN.onclick = () => {
+    const EXCEL = toExcel(MODS_TABLE);
+    downloadFile(EXCEL, 'excel');
 }
 
 const downloadFile = function (data, fileType, fileName = '') {
     const a = document.createElement('a');
     a.download = fileName;
-    const mime_types = {
+    const MIME_TYPES = {
         'json': 'application/json',
         'csv': 'text/csv',
         'excel': 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
     }
     a.href = `
-        data:${mime_types[fileType]};charset=utf-8,${encodeURIComponent(data)}
+        data:${MIME_TYPES[fileType]};charset=utf-8,${encodeURIComponent(data)}
     `;
     document.body.appendChild(a);
     a.click();
