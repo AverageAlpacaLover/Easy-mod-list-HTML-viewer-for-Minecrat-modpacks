@@ -1,0 +1,14 @@
+https://modrinth.com/*mod/*ModName
+ModName
+ClientServer
+❌
+❌
+❌
+---------
+https://curseforge.com/*mod/*ModName
+ModName
+ClientServer
+❌
+❌
+❌
+---------

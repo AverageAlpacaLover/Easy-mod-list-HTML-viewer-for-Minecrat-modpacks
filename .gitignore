@@ -1,6 +1,11 @@
 # Default ignored files
-!modLoaderIcons
-!modIcons
-modIcons*
-*.txt
 .vscode
+
+modIcons*
+!modIcons
+modIcons/*
+!modIcons/empty.webp
+!modLoaderIcons
+
+mods*.txt
+!modsTemplate.txt
