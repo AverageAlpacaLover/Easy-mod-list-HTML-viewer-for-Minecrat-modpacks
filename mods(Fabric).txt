@@ -1,0 +1,1312 @@
+https://modrinth.com/mod/accessories
+Accessories
+Fabric
+ClientServer
+Trinkets Compat Layer for Accessories/Cloth Config API
+❌
+❌
+---------
+https://modrinth.com/mod/accessories-tc-layer
+Trinkets Compat Layer for Accessories
+Fabric
+ClientServer
+❌
+Accessories/Spell Engine/Artifacts/Bewitchment/Botania/Extra RPG Attributes/Jewelry (RPG Series)/Spectrum
+Such mod acts as a compatibility layer for mods using the Trinkets API
+---------
+https://modrinth.com/mod/cloth-config
+Cloth Config API
+Fabric
+ClientServer
+❌
+Accessories/Spell Engine/Artifacts/Eldritch Mobs/Falling Leaves/You're in Grave Danger/Inventory Profiles Next/Simply Swords/Spectrum/Status Effect Bars/Traveler's Backpack/Traveler's Titles/Visuality/Hex Casting
+Lib
+---------
+https://modrinth.com/mod/adaptive-tooltips
+Adaptive Tooltips
+Fabric
+Client
+YetAnotherConfigLib (YACL)
+❌
+Vanilla tooltips
+---------
+https://modrinth.com/mod/yacl
+YetAnotherConfigLib (YACL)
+Fabric
+Client
+❌
+Adaptive Tooltips
+Lib
+---------
+https://modrinth.com/mod/appleskin
+AppleSkin
+Fabric
+ClientServer
+❌
+❌
+Adds various food-related HUD improvements
+---------
+https://modrinth.com/mod/archers
+Archers (RPG Series)
+Fabric
+ClientServer
+Ranged Weapon API/Spell Engine/AzureLib Armor
+NoFor
+RPG Series
+---------
+https://modrinth.com/mod/ranged-weapon-api
+Ranged Weapon API
+Fabric
+ClientServer
+❌
+Archers (RPG Series)/Jewelry (RPG Series)
+Lib
+---------
+https://modrinth.com/mod/spell-engine
+Spell Engine
+Fabric
+ClientServer
+Trinkets Compat Layer for Accessories/Cloth Config API/Spell Power Attributes/playerAnimator
+Archers (RPG Series)/Extra RPG Attributes/Druids of Storm and Spirit/Paladins & Priests (RPG Series)/Simply Skills/Wizards (RPG Series)/Zephyr
+Lib
+---------
+https://modrinth.com/mod/azurelib-armor
+AzureLib Armor
+Fabric
+ClientServer
+❌
+Archers (RPG Series)/Paladins & Priests (RPG Series)/Wizards (RPG Series)
+Lib
+---------
+https://modrinth.com/mod/spell-power
+Spell Power Attributes
+Fabric
+ClientServer
+❌
+Spell Engine/Druids of Storm and Spirit/Jewelry (RPG Series)/Simply Skills/Wizards (RPG Series)
+Lib
+---------
+https://modrinth.com/mod/playeranimator
+playerAnimator
+Fabric
+ClientServer
+❌
+Spell Engine/Druids of Storm and Spirit
+Lib
+---------
+https://modrinth.com/mod/architectury-api
+Architectury API
+Fabric
+ClientServer
+❌
+RightClickHarvest/Legacy: [Let's Do] Bakery/Legacy: [Let's Do] Brewery/[Let's Do] Vinery/[Let's Do] Furniture/[Let's Do] HerbalBrews/Artifacts/Simply Swords
+Lib
+---------
+https://modrinth.com/mod/artifacts
+Artifacts
+Fabric
+ClientServer
+Trinkets Compat Layer for Accessories/Cloth Config API/Architectury API
+❌
+Just Artifacts like Steak
+---------
+https://modrinth.com/mod/azurelib
+AzureLib
+Fabric
+ClientServer
+❌
+Druids of Storm and Spirit
+Lib
+---------
+https://modrinth.com/mod/balm
+Balm
+Fabric
+ClientServer
+❌
+Waystones
+Lib
+---------
+https://modrinth.com/mod/better-advancements
+Better Advancements
+Fabric
+Client
+❌
+❌
+All the Advancements tabs are now visible and scrollable
+---------
+https://modrinth.com/mod/bewitchment
+Bewitchment
+Fabric
+ClientServer
+Trinkets Compat Layer for Accessories/Patchouli/Pehkui
+❌
+Become a witch/doing rituals/morphing into vampire and more!
+---------
+https://modrinth.com/mod/patchouli
+Patchouli
+Fabric
+ClientServer
+❌
+Bewitchment/Mythic Mounts/Wildlife [Fabric]/PatchouliButton/Hex Casting
+Lib for guide books
+---------
+https://modrinth.com/mod/patchoulibutton
+PatchouliButton
+Fabric
+ClientServer
+Patchouli/Cloth Config API
+❌
+All-in-one guide book button
+---------
+https://modrinth.com/mod/pehkui
+Pehkui
+Fabric
+ClientServer
+❌
+ Bewitchment
+Lib
+---------
+https://modrinth.com/mod/bobby
+Bobby
+Fabric
+Client
+❌
+❌
+Increased chunk render distances
+---------
+https://modrinth.com/mod/botania
+Botania
+Fabric
+ClientServer
+Trinkets Compat Layer for Accessories/Patchouli
+❌
+Botania is a tech mod themed around natural magic
+---------
+https://www.curseforge.com/minecraft/mc-mods/simple-butchery
+Simple Butchery
+Fabric
+ClientServer
+❌
+❌
+Butchery
+---------
+https://modrinth.com/mod/cardinal-components-api
+Cardinal Components API
+Fabric
+ClientServer
+❌
+Traveler's Backpack/Hex Casting
+Lib
+---------
+https://modrinth.com/mod/cit-resewn
+CIT Resewn
+Fabric
+Client
+❌
+❌
+Needed for propper rendering resource packs
+---------
+https://modrinth.com/mod/clumps
+Clumps
+Fabric
+ClientServer
+❌
+❌
+Exp orbs clumping
+---------
+https://modrinth.com/mod/corn-delight-fabric
+Corn Delight [Fabric]
+Fabric
+ClientServer
+Farmer's Delight Refabricated
+❌
+A lot of corn
+---------
+https://modrinth.com/mod/farmers-delight-refabricated
+Farmer's Delight Refabricated
+Fabric
+ClientServer
+❌
+Corn Delight [Fabric]/End's Delight/Expanded Delight/Fright's Delight/More Delight/My Nether's Delight Refabricated/Ocean's Delight/Rustic Delight
+Food/cooking and cultures mod
+---------
+https://modrinth.com/mod/crate-delight
+Crate Delight
+Fabric
+ClientServer
+❌
+❌
+A lot of new crats for different cultures + mods
+---------
+https://modrinth.com/mod/creativecore
+CreativeCore
+Fabric
+Client
+❌
+ItemPhysic Lite
+Lib
+---------
+https://modrinth.com/mod/creeper-overhaul
+Creeper Overhaul
+Fabric
+ClientServer
+Resourceful Config/Resourceful Lib/Geckolib
+❌
+More Creepers
+---------
+https://modrinth.com/mod/resourceful-config
+Resourceful Config
+Fabric
+ClientServer
+❌
+Creeper Overhaul/Enderman Overhaul
+Lib
+---------
+https://modrinth.com/mod/resourceful-lib
+Resourceful Lib
+Fabric
+ClientServer
+❌
+Creeper Overhaul/Enderman Overhaul
+Lib
+---------
+https://modrinth.com/mod/geckolib
+Geckolib
+Fabric
+ClientServer
+❌
+Creeper Overhaul/Enderman Overhaul/Hamsters/Mythic Mounts/Naturalist/Ribbits/Wildlife [Fabric]
+Library for mobs
+---------
+https://modrinth.com/mod/runes
+Runes
+Fabric
+ClientServer
+❌
+Druids of Storm and Spirit/Paladins & Priests (RPG Series)/Wizards (RPG Series)
+Library for RPG series adding runes
+---------
+https://modrinth.com/mod/druids-of-storm-and-spirit
+Druids of Storm and Spirit
+Fabric
+ClientServer
+playerAnimator/AzureLib/Spell Power Attributes/Spell Engine/Runes/Extra RPG Attributes
+❌
+Electro and soul mage
+---------
+https://modrinth.com/mod/extra-rpg-attributes
+Extra RPG Attributes
+Fabric
+ClientServer
+Trinkets Compat Layer for Accessories/Spell Engine
+Druids of Storm and Spirit
+Lib
+---------
+https://modrinth.com/mod/eating-animation
+Eating Animation
+Fabric
+Client
+❌
+❌
+Eating Animation
+---------
+https://modrinth.com/mod/eldritch-mobs
+Eldritch Mobs
+Fabric
+ClientServer
+Cloth Config API
+❌
+Buffed mobs
+---------
+https://modrinth.com/mod/emi
+EMI
+Fabric
+Client
+❌
+EMI Enchants/EMI Loot/EMI Ores/EMI Trades/[Let's Do Addon] EMI Compat
+Item Viewer
+---------
+https://modrinth.com/mod/emienchants
+EMI Enchants
+Fabric
+Client
+EMI
+❌
+Enchanting Viewer
+---------
+https://modrinth.com/mod/lets-do-emi-compat
+[Let's Do Addon] EMI Compat
+Fabric
+Client
+EMI
+❌
+Viewer for Let's Do series
+---------
+https://modrinth.com/mod/emi-loot
+EMI Loot
+Fabric
+ClientServer
+EMI/Fzzy Config
+❌
+Loot Viewer
+---------
+https://modrinth.com/mod/emi-ores
+EMI Ores
+Fabric
+ClientServer
+EMI
+❌
+Ore Viewer
+---------
+https://modrinth.com/mod/emitrades
+EMI Trades
+Fabric
+Client
+EMI
+❌
+Trades Viewer
+---------
+https://modrinth.com/mod/fzzy-config
+Fzzy Config
+Fabric
+ClientServer
+Fabric Language Kotlin
+EMI Loot
+Lib
+---------
+https://modrinth.com/mod/fabric-language-kotlin
+Fabric Language Kotlin
+Fabric
+ClientServer
+❌
+Fzzy Config/FSit/Enhanced Cats/Hex Casting
+Lib
+---------
+https://modrinth.com/mod/enderman-overhaul
+Enderman Overhaul
+Fabric
+ClientServer
+Resourceful Config/Resourceful Lib/Geckolib
+❌
+More Endermans
+---------
+https://modrinth.com/mod/ends-delight
+End's Delight
+Fabric
+ClientServer
+Farmer's Delight Refabricated
+❌
+End Food
+---------
+https://modrinth.com/mod/expanded-delight
+Expanded Delight
+Fabric
+ClientServer
+Farmer's Delight Refabricated
+❌
+Pancakes, Coffe, Cotton
+---------
+https://modrinth.com/mod/rustic-delight
+Rustic Delight
+Fabric
+ClientServer
+Farmer's Delight Refabricated
+❌
+Even more Food
+---------
+https://modrinth.com/mod/exlines-furniture
+Exline's Furniture
+Fabric
+ClientServer
+❌
+❌
+More furniture
+---------
+https://modrinth.com/mod/storagedrawers
+Storage Drawers
+Fabric
+ClientServer
+❌
+❌
+Better storage systems
+---------
+https://modrinth.com/mod/fabric-api
+Fabric API
+Fabric
+ClientServer
+❌
+AlmostEveryMod
+Lib
+---------
+https://modrinth.com/mod/fabrictailor
+Fabric Tailor
+Fabric
+ClientServer
+❌
+❌
+Skin Changer
+---------
+https://modrinth.com/mod/fakerlib
+FakerLib
+Fabric
+ClientServer
+❌
+Zenith/Zenith Attributes
+Lib for zenith
+---------
+https://modrinth.com/mod/fallingleaves
+Falling Leaves
+Fabric
+Client
+Cloth Config API
+❌
+Leaves Particles
+---------
+https://modrinth.com/mod/fallingtree
+FallingTree
+Fabric
+ClientServer
+❌
+❌
+Trees Falls Instantly
+---------
+https://modrinth.com/mod/ferrite-core
+FerriteCore
+Fabric
+ClientServer
+❌
+❌
+Reduce Memmory Usage
+---------
+https://modrinth.com/mod/forge-config-api-port
+Forge Config API Port
+Fabric
+ClientServer
+❌
+Regions Unexplored
+Lib
+---------
+https://modrinth.com/mod/yigd
+You're in Grave Danger
+Fabric
+ClientServer
+Cloth Config API
+❌
+Graves on death
+---------
+https://modrinth.com/mod/frights-delight
+Fright's Delight
+Fabric
+ClientServer
+Farmer's Delight Refabricated
+❌
+Spooky food
+---------
+https://modrinth.com/mod/fsit
+FSit
+Fabric
+ClientServer
+Fabric Language Kotlin
+❌
+Sit/crouch anywhere
+---------
+https://modrinth.com/mod/gazebos
+Gazebos (RPG Series)
+Fabric
+ClientServer
+Structure Pool API
+❌
+More structures
+---------
+https://modrinth.com/mod/structure-pool-api
+Structure Pool API
+Fabric
+ClientServer
+❌
+Gazebos (RPG Series)/Jewelry (RPG Series)
+Lib
+---------
+https://modrinth.com/mod/hamsters
+Hamsters
+Fabric
+ClientServer
+Geckolib
+❌
+Hamsters and wheels
+---------
+https://modrinth.com/mod/hearth-and-home
+Hearth & Home
+Fabric
+ClientServer
+❌
+❌
+More Building Decorations
+---------
+https://modrinth.com/mod/idwtialsimmoedm
+Idwtialsimmoedm
+Fabric
+Client
+❌
+❌
+Enchantment descriptions
+---------
+https://modrinth.com/mod/immersive-paintings
+Immersive Paintings
+Fabric
+ClientServer
+❌
+❌
+Any picture as a painting
+---------
+https://modrinth.com/mod/indium
+Indium
+Fabric
+Client
+Sodium
+❌
+Rendering Lib
+---------
+https://modrinth.com/mod/sodium
+Sodium
+Fabric
+Client
+❌
+Indium/Reese's Sodium Options/Sodium Extra/Sodium Options API/Sodium Extras/Sodium Dynamic Lights
+Optimization
+---------
+https://modrinth.com/mod/sodium-extra
+Sodium Extra
+Fabric
+Client
+Sodium
+❌
+More Optimization Options
+---------
+https://modrinth.com/mod/reeses-sodium-options
+Reese's Sodium Options
+Fabric
+Client
+Sodium
+❌
+More Optimization Options
+---------
+https://modrinth.com/mod/sodium-options-api
+Sodium Options API
+Fabric
+Client
+Sodium
+Sodium Extras/Sodium Dynamic Lights
+Api for sodium related mods
+---------
+https://modrinth.com/mod/sodium-extras
+Sodium Extras
+Fabric
+Client
+Sodium/Sodium Options API
+❌
+More Optimization Options
+---------
+https://modrinth.com/mod/sodium-dynamic-lights
+Sodium Dynamic Lights
+Fabric
+Client
+Sodium/Sodium Options API
+❌
+Sodium Dynamic Lighting
+---------
+https://modrinth.com/mod/inventory-profiles-next
+Inventory Profiles Next
+Fabric
+Client
+libIPN/Cloth Config API
+❌
+Sorting inventory
+---------
+https://modrinth.com/mod/libipn
+libIPN
+Fabric
+Client
+❌
+Inventory Profiles Next
+Lib
+---------
+https://modrinth.com/mod/ironchests
+Iron Chests: Restocked
+Fabric
+ClientServer
+❌
+❌
+Better chests
+---------
+https://modrinth.com/mod/itemphysic-lite
+ItemPhysic Lite
+Fabric
+Client
+CreativeCore
+❌
+Dropped items laying on the ground
+---------
+https://modrinth.com/mod/jade
+Jade
+Fabric
+ClientServer
+❌
+❌
+Shows information about the items in the world
+---------
+https://modrinth.com/mod/jamlib
+JamLib
+Fabric
+ClientServer
+❌
+RightClickHarvest
+Lib
+---------
+https://modrinth.com/mod/rightclickharvest
+RightClickHarvest
+Fabric
+ClientServer
+JamLib/Architectury API
+❌
+RightClickHarvest
+---------
+https://modrinth.com/mod/jei
+Just Enough Items
+Fabric
+ClientServer
+❌
+❌
+Recipe viewer
+---------
+https://modrinth.com/mod/jewelry
+Jewelry (RPG Series)
+Fabric
+ClientServer
+Trinkets Compat Layer for Accessories/Structure Pool API/Spell Power Attributes/Ranged Weapon API
+❌
+Jewelry RPG Series
+---------
+https://modrinth.com/mod/do-api
+[Let's Do] API
+Fabric
+ClientServer
+❌
+Legacy: [Let's Do] Bakery/Legacy: [Let's Do] Brewery/[Let's Do] Vinery/
+Lib for Let's Do/
+---------
+https://modrinth.com/mod/lets-do-bakery
+Legacy: [Let's Do] Bakery
+Fabric
+ClientServer
+[Let's Do] API/Architectury API
+❌
+Cupcakes and cakes
+---------
+https://modrinth.com/mod/lets-do-brewery
+Legacy: [Let's Do] Brewery
+Fabric
+ClientServer
+[Let's Do] API/Architectury API
+❌
+Beer
+---------
+https://modrinth.com/mod/lets-do-furniture
+[Let's Do] Furniture
+Fabric
+ClientServer
+Architectury API
+❌
+More Furniture
+---------
+https://modrinth.com/mod/lets-do-herbalbrews
+[Let's Do] HerbalBrews
+Fabric
+ClientServer
+Architectury API
+❌
+Tea
+---------
+https://modrinth.com/mod/lets-do-vinery
+[Let's Do] Vinery
+Fabric
+ClientServer
+[Let's Do] API/Architectury API
+❌
+Vine
+---------
+https://modrinth.com/mod/lithium
+Lithium
+Fabric
+ClientServer
+❌
+❌
+Ticking and entity game logic improvement
+---------
+https://modrinth.com/mod/logical-zoom
+Logical Zoom
+Fabric
+Client
+❌
+❌
+Jusr zoom
+---------
+https://modrinth.com/mod/memoryleakfix
+Memory Leak Fix
+Fabric
+ClientServer
+❌
+❌
+Reduce Memory Usage
+---------
+https://modrinth.com/mod/modmenu
+Mod Menu
+Fabric
+Client
+❌
+❌
+Menu and configuration for mods
+---------
+https://modrinth.com/mod/modonomicon
+Modonomicon
+Fabric
+ClientServer
+❌
+Spectrum
+Lib
+---------
+https://modrinth.com/mod/more-delight
+More Delight
+Fabric
+ClientServer
+Farmer's Delight Refabricated
+❌
+More food
+---------
+https://modrinth.com/mod/mythic-mounts
+Mythic Mounts
+Fabric
+ClientServer
+Geckolib/Patchouli
+❌
+New Mountable Creatures
+---------
+https://modrinth.com/mod/naturalist
+Naturalist
+Fabric
+ClientServer
+Geckolib
+❌
+A lot of real life mobs
+---------
+https://modrinth.com/mod/natures-compass
+Nature's Compass
+Fabric
+ClientServer
+❌
+❌
+Compass to search for biomes
+---------
+https://modrinth.com/mod/nvidium
+Nvidium
+Fabric
+Client
+❌
+❌
+Full use of Nvidia Gpu
+---------
+https://modrinth.com/mod/my-nethers-delight-refabricated
+My Nether's Delight Refabricated
+Fabric
+ClientServer
+Farmer's Delight Refabricated
+❌
+Nether Food
+---------
+https://modrinth.com/mod/oceans-delight
+Ocean's Delight
+Fabric
+ClientServer
+Farmer's Delight Refabricated
+❌
+Ocean Food
+---------
+https://modrinth.com/plugin/plasmo-voice
+Plasmo Voice
+Fabric
+ClientServer
+❌
+❌
+Voice On Server
+---------
+https://modrinth.com/mod/paladins-and-priests
+Paladins & Priests (RPG Series)
+Fabric
+ClientServer
+Spell Engine/Runes/AzureLib Armor/Shield API
+❌
+RPG Series
+---------
+https://modrinth.com/mod/shield-api
+Shield API
+Fabric
+ClientServer
+❌
+Paladins & Priests (RPG Series)
+Lib
+---------
+https://modrinth.com/mod/polymorph
+Polymorph
+Fabric
+ClientServer
+❌
+❌
+Choose the crafting result
+---------
+https://modrinth.com/mod/simply-skills
+Simply Skills
+Fabric
+ClientServer
+Pufferfish's Attributes/Pufferfish's Skills/Spell Power Attributes/Spell Engine
+❌
+Skill Tree
+---------
+https://modrinth.com/mod/attributes
+Pufferfish's Attributes
+Fabric
+ClientServer
+❌
+Simply Skills
+Lib
+---------
+https://modrinth.com/mod/skills
+Pufferfish's Skills
+Fabric
+ClientServer
+❌
+Simply Skills
+Lib
+---------
+https://modrinth.com/mod/quartz-elevator
+Quartz Elevator
+Fabric
+ClientServer
+❌
+❌
+Elevator Block
+---------
+https://modrinth.com/mod/regions-unexplored
+Regions Unexplored
+Fabric
+ClientServer
+TerraBlender/Forge Config API Port
+❌
+New World Generation
+---------
+https://modrinth.com/mod/terrablender
+TerraBlender
+Fabric
+ClientServer
+❌
+Regions Unexplored
+Lib
+---------
+https://modrinth.com/mod/revelationary
+Revelationary
+Fabric
+ClientServer
+❌
+Spectrum
+Lib
+---------
+https://modrinth.com/mod/ribbits
+Ribbits
+Fabric
+ClientServer
+Geckolib/YUNG's API
+❌
+Frogs proffesions
+---------
+https://modrinth.com/mod/seamless-loading-screen
+Seamless Loading Screen
+Fabric
+Client
+❌
+❌
+Screenshot on loading screen
+---------
+https://modrinth.com/mod/shulkerboxtooltip
+Shulker Box Tooltip
+Fabric
+ClientServer
+❌
+❌
+View the contents of shulker boxes from your inventory
+---------
+https://modrinth.com/mod/simple-backup
+Simple Backup
+Fabric
+ClientServer
+❌
+❌
+World Backup
+---------
+https://modrinth.com/mod/simply-swords
+Simply Swords
+Fabric
+ClientServer
+Cloth Config API/Architectury API
+❌
+New weapons
+---------
+https://modrinth.com/mod/spice-of-fabric
+Spice of Fabric
+Fabric
+ClientServer
+❌
+❌
+Fully reconfigured food consuming
+---------
+https://modrinth.com/mod/spectrum
+Spectrum
+Fabric
+ClientServer
+Modonomicon/Revelationary/Trinkets Compat Layer for Accessories/Cloth Config API
+❌
+A full-feature minecraft mod about harnessing the powers of color
+---------
+https://modrinth.com/mod/status-effect-bars
+Status Effect Bars
+Fabric
+Client
+Cloth Config API
+❌
+Statuses on screen
+---------
+https://modrinth.com/mod/storage-delight
+Storage Delight
+Fabric
+ClientServer
+❌
+❌
+Lib
+---------
+https://modrinth.com/datapack/structory
+Structory
+Fabric
+ClientServer
+❌
+❌
+More structure generation
+---------
+https://modrinth.com/datapack/structory-towers
+Structory: Towers
+Fabric
+ClientServer
+❌
+❌
+More structure generation
+---------
+https://modrinth.com/mod/totw-modded
+Towers of the Wild Modded
+Fabric
+ClientServer
+❌
+❌
+New Tower Strucures
+---------
+https://modrinth.com/mod/travelersbackpack
+Traveler's Backpack
+Fabric
+ClientServer
+Cloth Config API/Cardinal Components API
+❌
+Backpacks
+---------
+https://modrinth.com/mod/travelers-titles
+Traveler's Titles
+Fabric
+Client
+Cloth Config API/YUNG's API
+❌
+Titles
+---------
+https://modrinth.com/mod/visuality
+Visuality
+Fabric
+Client
+Cloth Config API
+❌
+Bunch of new particles
+---------
+https://modrinth.com/mod/waystones
+Waystones
+Fabric
+ClientServer
+Balm
+❌
+Teleport back to activated waystones
+---------
+https://modrinth.com/mod/wildlife-fabric
+Wildlife [Fabric]
+Fabric
+ClientServer
+Geckolib/Patchouli
+❌
+Adds extra animals and insects to Minecraft!
+---------
+https://modrinth.com/mod/wizards
+Wizards (RPG Series)
+Fabric
+ClientServer
+Runes/AzureLib Armor/Spell Engine/Spell Power Attributes
+Wizards (RPG Series)
+RPG Series
+---------
+https://modrinth.com/mod/xaeros-minimap
+Xaero's Minimap
+Fabric
+Client
+❌
+❌
+Minimap
+---------
+https://modrinth.com/mod/yungs-api
+YUNG's API
+Fabric
+ClientServer
+❌
+Ribbits/Traveler's Titles/YUNG's Better Desert Temples/YUNG's Better Dungeons/YUNG's Better Jungle Temples/YUNG's Better Mineshafts/YUNG's Better Nether Fortresses/YUNG's Better Ocean Monuments/YUNG's Better Witch Huts/YUNG's Bridges/YUNG's Extras
+Lib
+---------
+https://modrinth.com/mod/yungs-better-desert-temples
+YUNG's Better Desert Temples
+Fabric
+ClientServer
+YUNG's API
+❌
+Better
+---------
+https://modrinth.com/mod/yungs-better-dungeons
+YUNG's Better Dungeons
+Fabric
+ClientServer
+YUNG's API
+❌
+Better
+---------
+https://modrinth.com/mod/yungs-better-jungle-temples
+YUNG's Better Jungle Temples
+Fabric
+ClientServer
+YUNG's API
+❌
+Better
+---------
+https://modrinth.com/mod/yungs-better-mineshafts
+YUNG's Better Mineshafts
+Fabric
+ClientServer
+YUNG's API
+❌
+Better
+---------
+https://modrinth.com/mod/yungs-better-nether-fortresses
+YUNG's Better Nether Fortresses
+Fabric
+ClientServer
+YUNG's API
+❌
+Better
+---------
+https://modrinth.com/mod/yungs-better-ocean-monuments
+YUNG's Better Ocean Monuments
+Fabric
+ClientServer
+YUNG's API
+❌
+Better
+---------
+https://modrinth.com/mod/yungs-better-witch-huts
+YUNG's Better Witch Huts
+Fabric
+ClientServer
+YUNG's API
+❌
+Better
+---------
+https://modrinth.com/mod/yungs-bridges
+YUNG's Bridges
+Fabric
+ClientServer
+YUNG's API
+❌
+Better
+---------
+https://modrinth.com/mod/yungs-extras
+YUNG's Extras
+Fabric
+ClientServer
+YUNG's API
+❌
+Better
+---------
+https://modrinth.com/mod/zenith
+Zenith
+Fabric
+ClientServer
+Zenith Attributes/FakerLib
+Zephyr
+Changes and expands upon many systems
+---------
+https://modrinth.com/mod/zenith-attributes
+Zenith Attributes
+Fabric
+ClientServer
+FakerLib
+Zenith
+Adds attributes/and an attributes viewer/used for Zenith
+---------
+https://modrinth.com/mod/zephyr-mod
+Zephyr
+Fabric
+ClientServer
+Zenith/Spell Engine
+❌
+Zenith Affixes and Gems for the RPG Series
+---------
+https://modrinth.com/mod/enhanced-cats
+Enhanced Cats
+Fabric
+ClientServer
+Fabric Language Kotlin
+❌
+Cats new behavior
+---------
+https://modrinth.com/mod/plushables
+Plushables
+Fabric
+ClientServer
+❌
+❌
+Cute plushies
+---------
+https://modrinth.com/mod/entitytexturefeatures
+[ETF] Entity Texture Features
+Fabric
+Client
+❌
+❌
+For ResourcePack models/textures
+---------
+https://modrinth.com/mod/entity-model-features
+[EMF] Entity Model Features
+Fabric
+Client
+❌
+❌
+For ResourcePack models/textures
+---------
+https://modrinth.com/mod/hex-casting
+Hex Casting
+Fabric
+ClientServer
+PAUCAL/Inline/Fabric Language Kotlin/Cardinal Components API/Cloth Config API/Patchouli
+❌
+Cast anything with wand!
+---------
+https://modrinth.com/mod/paucal
+PAUCAL
+Fabric
+ClientServer
+❌
+Hex Casting
+Lib + Headpats
+---------
+https://modrinth.com/mod/inline
+Inline
+Fabric
+ClientServer
+❌
+Hex Casting
+Lib
+---------
+https://modrinth.com/datapack/terralith
+Terralith
+Fabric
+ClientServer
+❌
+❌
+More Vanila Biomes
+---------
+https://modrinth.com/datapack/incendium
+Incendium
+Fabric
+ClientServer
+❌
+❌
+Nether Overhaul
+---------
+https://modrinth.com/datapack/stellarity
+Stellarity
+Fabric
+ClientServer
+❌
+❌
+End Overhaul
+---------
+https://modrinth.com/datapack/dungeons-and-taverns
+Dungeons and Taverns
+Fabric
+ClientServer
+❌
+❌
+More enormous structures
+---------
+https://modrinth.com/mod/deeperdarker
+Deeper and Darker
+Fabric
+ClientServer
+owo-lib
+❌
+Deep Dark Overhaul
+---------
+https://modrinth.com/mod/owo-lib
+owo-lib
+Fabric
+ClientServer
+❌
+Deep Dark Overhaul
+Lib
+---------
+https://modrinth.com/mod/iceandfire-ce
+IceAndFire Community Edition
+Fabric
+ClientServer
+Uranus/Jupiter
+❌
+Dragons, hypogriffs, faries
+---------
+https://modrinth.com/mod/uranus
+Uranus
+Fabric
+ClientServer
+❌
+IceAndFire Community Edition
+Lib
+---------
+https://modrinth.com/mod/jupiter
+Jupiter
+Fabric
+ClientServer
+❌
+IceAndFire Community Edition
+Lib
+---------
+https://modrinth.com/mod/sparsestructures/version/XcUzPH3Z
+Sparse Structures
+Fabric
+ClientServer
+❌
+❌
+Make structure common/rare
+---------

@@ -31,19 +31,23 @@ function populateTable() {
                         txtTable.splice(index,1);   
                     });
                     
-					for (let index =0; index < txtTable.length; index++) {
+					for (let index = 0; index < txtTable.length; index++) {
                         //pushing every element of a row table to a specific array for better readability
                         let modLink = txtTable[index][0];
                         let modName = txtTable[index][1];
                         let modLoader = txtTable[index][2];
+                        if (txtTable[index][2].toLowerCase().startsWith("neo"))
+                        {
+                            modLoader = "NeoForged";
+                        }
                         let modType = txtTable[index][3];
                         let modDependencies = txtTable[index][4].split("/");
                         let modRequirements = txtTable[index][5].split("/");
                         let modDescription = txtTable[index][6];
                         //creating every cell of an *index row table for the HTML
-                        let tableCellIcon = '<td><img src="modIcons/' + modName + '.webp" onerror="this.src=\'pageImages/empty.webp\';"></td>';
+                        let tableCellIcon = '<td><img src="modIcons/' + modName + '" onerror="this.src=\'pageImages/empty.webp\';"></td>'; //
                         let tableCellName = '<td><a href="' + modLink + '">' + modName + '</a></td>';
-                        let tableCellLoader = '<td><img src="modLoaderIcons/' + modLoader.toLowerCase() + '.png" onerror="this.src=\'pageImages/empty.webp\';">' + modLoader.toUpperCase() + '</td>';
+                        let tableCellLoader = '<td><img src="modLoaderIcons/' + modLoader.toLowerCase() + '.png" onerror="this.src=\'pageImages/empty.webp\';">' + modLoader + '</td>';
                         let tableCellType = '<td><p class="modtype ' + modType.toLowerCase() + '">' + modType + '</td>';
                         
                         let tableCellDependencies = '<td>';
@@ -51,7 +55,7 @@ function populateTable() {
                             let linkFound = false;
                             for (let tIndex = 0; tIndex < txtTable.length; tIndex++) { //Looping through every Mod Name to extract a link to the mod
                                 if (txtTable[tIndex][1] === modDependencies[mIndex]) { // Mod Name = Mod Dependance?
-                                        let icon = '<img class="tooltipImage" src="modIcons/'+ txtTable[tIndex][1] +'.webp" onerror="this.src=\'pageImages/empty.webp\';">' //icon when hovering over the link
+                                        let icon = '<img class="tooltipImage" src="modIcons/'+ txtTable[tIndex][1] +'" onerror="this.src=\'pageImages/empty.webp\';">' //icon when hovering over the link
                                         tableCellDependencies += '<a class="tooltip" href="'+ txtTable[tIndex][0] +'">'+ modDependencies[mIndex] + icon +'</a> | '; 
                                         linkFound = true;
                                 } 
@@ -68,7 +72,7 @@ function populateTable() {
                             let linkFound = false;
                             for (let tIndex = 0; tIndex < txtTable.length; tIndex++) { //Looping through every Mod Name to extract a link to the mod
                                 if (txtTable[tIndex][1] === modRequirements[mIndex]) { // Mod Name = Mod Require?
-                                    let icon = '<img class="tooltipImage" src="modIcons/' + txtTable[tIndex][1] + '.webp" onerror="this.src=\'pageImages/empty.webp\';">' //icon when hovering over the link
+                                    let icon = '<img class="tooltipImage" src="modIcons/' + txtTable[tIndex][1] + '" onerror="this.src=\'pageImages/empty.webp\';">' //icon when hovering over the link
                                         tableCellRequirements += '<a class="tooltip" href="' + txtTable[tIndex][0] + '">' + modRequirements[mIndex] + icon + '</a> | ';
                                         linkFound = true;
                                 }
@@ -90,7 +94,7 @@ function populateTable() {
 }
 
 // 1. Searching for specific data of HTML table
-CHOOSECHOSEN_LOADERS_LOADER.addEventListener('change', function (){
+CHOSEN_LOADERS.addEventListener('change', function (){
     CHOSEN_LOADERS.classList = "";
     Array.from(CHOSEN_LOADERS.selectedOptions).forEach(option => CHOSEN_LOADERS.classList.add(option.value)) //adding classes to hide UNSELECTED mod loaders
     hideRows();

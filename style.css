@@ -158,7 +158,7 @@ tbody img {
 /*---------------------------------------------*/
 .modtype {
     padding: .4rem 10;
-    border-radius: 1rem;
+    border-radius: 0rem;
     text-align: center;
 }
 .modtype.clientserver {
@@ -187,6 +187,7 @@ tbody img {
     display: none;
 }
 .export__file .export__file-options {
+    visibility: hidden;
     position: absolute;
     right: 0;
     
@@ -202,6 +203,7 @@ tbody img {
     box-shadow: 0 .2rem .5rem #0004;
 }
 .export__file input:checked + .export__file-options {
+    visibility: visible;
     opacity: 1;
     transform: scale(1);
     z-index: 100;

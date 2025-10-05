@@ -52,7 +52,7 @@ Simple Html table viewer for Minecraft mod packs. With easy to read visuals, fil
 ## Usage
 <ul>
   <li>Create a txt file with specific structure.</li>
-  <li>Don't forget to put mods .webp to "modIcons" folder under the same name as the mod name.</li>
+  <li>Don't forget to put mods images to "modIcons" folder under the same name as the mod name without any file extensions (.png .webp etc.).</li>
   <li>Open the Html and choose list with mods file in the top right corner.</li>
 </ul>
 <br />
@@ -74,7 +74,7 @@ Blank Mod list txt file:
 
 <br />LinkToTheMod
 <br />NameOfTheMod
-<br />Fabric/Neoforged
+<br />Fabric/Neoforged(could use neo or neoforge)
 <br />ClientServer
 <br />❌
 <br />❌
