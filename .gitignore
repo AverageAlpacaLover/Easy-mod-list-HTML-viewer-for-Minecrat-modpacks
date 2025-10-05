@@ -1,8 +1,6 @@
 # Default ignored files
-!modsTemplate.txt
 !modLoaderIcons
 !modIcons
-modIcons/
-/modIcons*
-mods*.txt
+modIcons*
+*.txt
 .vscode
